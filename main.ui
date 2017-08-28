@@ -1,0 +1,2876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Geodesic2shape</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="accessibleDescription">
+   <string/>
+  </property>
+  <widget class="QLabel" name="label_40">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="text">
+    <string>Geodesic2shape</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>256</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Computes geodetic problems and export the geodesic's line segment of interest to a shapefile.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_restore">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>562</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Restore</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_exit">
+   <property name="geometry">
+    <rect>
+     <x>348</x>
+     <y>562</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>77</y>
+     <width>441</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Foward</string>
+    </attribute>
+    <widget class="QFrame" name="frame_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>421</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QTextEdit" name="fow_result">
+      <property name="geometry">
+       <rect>
+        <x>104</x>
+        <y>277</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>54</x>
+        <y>287</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_foward">
+      <property name="geometry">
+       <rect>
+        <x>103</x>
+        <y>250</y>
+        <width>201</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Solve the Foward Geodetic Problem</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>127</y>
+        <width>351</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Foward Problem</string>
+      </property>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>96</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ellipsoidal distance:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_lat1_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>219</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_long1_sec">
+       <property name="geometry">
+        <rect>
+         <x>179</x>
+         <y>45</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_lat1_sec">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>70</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_az1_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>70</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>009; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_fow_lat1">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>16</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>North</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>South</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="fow_az1_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>217</x>
+         <y>71</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_az1_sec">
+       <property name="geometry">
+        <rect>
+         <x>179</x>
+         <y>71</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_long1_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>217</x>
+         <y>45</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_fow_long1">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>44</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>East</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>West</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="fow_lat1_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="cursorPosition">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>197</x>
+         <y>101</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_az1_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>70</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_43">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>51</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>253</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_s_2">
+       <property name="geometry">
+        <rect>
+         <x>205</x>
+         <y>96</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>44</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>73</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(from North)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>275</x>
+         <y>96</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(in meters)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>73</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Azimuth:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>47</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Longitude P1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_42">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>22</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_lat1_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>44</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_long1_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>44</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>19</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Latitude P1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>251</x>
+         <y>45</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_44">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>77</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>251</x>
+         <y>71</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_s">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>96</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>00000000; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>8</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_long1_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>44</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>009; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>70</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>401</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GRS (Geographic Reference System)</string>
+      </property>
+      <widget class="QRadioButton" name="radio_fowepsg1">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>20</y>
+         <width>171</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select EPSG/GRS from the list:</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_fowepsg2">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>50</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter EPSG:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_fow_epsg">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>18</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>4326: WGS 84</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4674: SIRGAS 2000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4618: SAD 69</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4225: Corrego Alegre</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="fow_epsg">
+       <property name="geometry">
+        <rect>
+         <x>83</x>
+         <y>49</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>000000; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_elip_b_2">
+       <property name="geometry">
+        <rect>
+         <x>247</x>
+         <y>96</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>00000; </string>
+       </property>
+       <property name="text">
+        <string>00000</string>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_46">
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>101</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_elip_a_2">
+       <property name="geometry">
+        <rect>
+         <x>118</x>
+         <y>96</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>00000; </string>
+       </property>
+       <property name="text">
+        <string>00000</string>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_elip_b">
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>96</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000000; </string>
+       </property>
+       <property name="text">
+        <string>0000000</string>
+       </property>
+       <property name="maxLength">
+        <number>7</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>7</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_fowelip">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>75</y>
+         <width>381</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter ellipsoid parameters instead (&quot;Export SHP&quot; won't be available):</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>91</y>
+         <width>20</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>b:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_elip_a">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>63</x>
+         <y>96</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000000; </string>
+       </property>
+       <property name="text">
+        <string>0000000</string>
+       </property>
+       <property name="maxLength">
+        <number>7</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>7</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>52</x>
+         <y>95</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>a:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_53">
+       <property name="geometry">
+        <rect>
+         <x>244</x>
+         <y>101</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_45">
+       <property name="geometry">
+        <rect>
+         <x>302</x>
+         <y>98</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(both in meters)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>51</y>
+         <width>231</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(from a GRS)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>356</y>
+        <width>351</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Shapefile: interval between solutions points (see &quot;How it works?&quot;)</string>
+      </property>
+      <widget class="QRadioButton" name="radio_fowinterval1">
+       <property name="geometry">
+        <rect>
+         <x>38</x>
+         <y>16</y>
+         <width>141</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1000 meters (default)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_fowinterval2">
+       <property name="geometry">
+        <rect>
+         <x>38</x>
+         <y>36</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter interval:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_52">
+       <property name="geometry">
+        <rect>
+         <x>183</x>
+         <y>41</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_int">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>36</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fow_int2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>36</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>38</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(in meters)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="button_fow_export_point">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>420</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; Export SHP (Point)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_fow_export_line">
+      <property name="geometry">
+       <rect>
+        <x>277</x>
+        <y>420</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; Export SHP (Line)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_54">
+      <property name="geometry">
+       <rect>
+        <x>44</x>
+        <y>338</y>
+        <width>341</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; The field below is mandatory only if you want to export a SHP:</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Inverse</string>
+    </attribute>
+    <widget class="QFrame" name="frame_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>421</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QTextEdit" name="inv_result">
+      <property name="geometry">
+       <rect>
+        <x>104</x>
+        <y>286</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>54</x>
+        <y>296</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_inverse">
+      <property name="geometry">
+       <rect>
+        <x>103</x>
+        <y>259</y>
+        <width>201</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Solve the Inverse Geodetic Problem</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>33</x>
+        <y>127</y>
+        <width>351</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Foward Problem</string>
+      </property>
+      <widget class="QLineEdit" name="inv_lat1_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>219</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long1_sec">
+       <property name="geometry">
+        <rect>
+         <x>179</x>
+         <y>45</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat1_sec">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_inv_lat1">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>16</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>North</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>South</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="inv_long1_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>217</x>
+         <y>45</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_inv_long1">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>44</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>East</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>West</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat1_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="cursorPosition">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_48">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>51</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>253</x>
+         <y>16</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>44</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>47</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Longitude P1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_49">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>22</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat1_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>16</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>44</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long1_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>44</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>19</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Latitude P1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>251</x>
+         <y>45</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long1_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>44</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>009; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_50">
+       <property name="geometry">
+        <rect>
+         <x>211</x>
+         <y>110</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_inv_long2">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>103</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>East</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>West</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="inv_long2_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>103</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>75</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_inv_lat2">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>75</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>North</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>South</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>251</x>
+         <y>104</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long2_sec">
+       <property name="geometry">
+        <rect>
+         <x>179</x>
+         <y>104</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>253</x>
+         <y>75</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>''</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat2_min">
+       <property name="geometry">
+        <rect>
+         <x>135</x>
+         <y>75</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>23</x>
+         <y>78</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Latitude P2:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat2_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>75</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="cursorPosition">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long2_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>217</x>
+         <y>104</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_long2_deg">
+       <property name="geometry">
+        <rect>
+         <x>91</x>
+         <y>103</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>009; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_47">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>106</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Longitude P2:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat2_sec">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>75</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="inputMask">
+        <string>09; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_60">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>103</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>123</x>
+         <y>103</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>°</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>171</x>
+         <y>75</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>'</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_lat2_sec_2">
+       <property name="geometry">
+        <rect>
+         <x>219</x>
+         <y>75</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0009; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_61">
+       <property name="geometry">
+        <rect>
+         <x>213</x>
+         <y>81</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>401</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GRS (Geographic Reference System)</string>
+      </property>
+      <widget class="QRadioButton" name="radio_invepsg1">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>20</y>
+         <width>171</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Select EPSG/GRS from the list:</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_invepsg2">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>50</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter EPSG:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_inv_epsg">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>18</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>4326: WGS 84</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4674: SIRGAS 2000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5332: ITRF 2008</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7789: ITRF 2014</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4258: ETRS 89</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6318: NAD 83 (2011)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4618: SAD 69</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4225: Corrego Alegre</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="inv_epsg">
+       <property name="geometry">
+        <rect>
+         <x>83</x>
+         <y>49</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>000000; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_elip_b_2">
+       <property name="geometry">
+        <rect>
+         <x>247</x>
+         <y>96</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>00000; </string>
+       </property>
+       <property name="text">
+        <string>00000</string>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_51">
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>101</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_elip_a_2">
+       <property name="geometry">
+        <rect>
+         <x>118</x>
+         <y>96</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>00000; </string>
+       </property>
+       <property name="text">
+        <string>00000</string>
+       </property>
+       <property name="maxLength">
+        <number>5</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>5</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_elip_b">
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>96</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000000; </string>
+       </property>
+       <property name="text">
+        <string>0000000</string>
+       </property>
+       <property name="maxLength">
+        <number>7</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>7</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_invelip">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>75</y>
+         <width>391</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter ellipsoid parameters instead (&quot;Export SHP&quot; won't be available):</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>91</y>
+         <width>20</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>b:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_elip_a">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>63</x>
+         <y>96</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000000; </string>
+       </property>
+       <property name="text">
+        <string>0000000</string>
+       </property>
+       <property name="maxLength">
+        <number>7</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>7</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_38">
+       <property name="geometry">
+        <rect>
+         <x>52</x>
+         <y>95</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>a:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_55">
+       <property name="geometry">
+        <rect>
+         <x>244</x>
+         <y>101</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_56">
+       <property name="geometry">
+        <rect>
+         <x>302</x>
+         <y>98</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(both in meters)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_39">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>51</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(from a GRS)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>360</y>
+        <width>351</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Shapefile: interval between solutions points (see &quot;How it works?&quot;)</string>
+      </property>
+      <widget class="QRadioButton" name="radio_invinterval1">
+       <property name="geometry">
+        <rect>
+         <x>38</x>
+         <y>16</y>
+         <width>141</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1000 meters (default)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radio_invinterval2">
+       <property name="geometry">
+        <rect>
+         <x>38</x>
+         <y>36</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Enter distance:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_57">
+       <property name="geometry">
+        <rect>
+         <x>183</x>
+         <y>41</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_int">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>36</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="inv_int2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>36</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+       <property name="text">
+        <string>0000</string>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>4</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_58">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>38</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>(in meters)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="button_inv_export_point">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>424</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; Export SHP (Point)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_inv_export_line">
+      <property name="geometry">
+       <rect>
+        <x>277</x>
+        <y>424</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; Export SHP (Line)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_59">
+      <property name="geometry">
+       <rect>
+        <x>44</x>
+        <y>342</y>
+        <width>341</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>--&gt; The field below is mandatory only if you want to export a SHP:</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="button_how_works">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>50</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>How it works?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_input_instr">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>20</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Input Instructions</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

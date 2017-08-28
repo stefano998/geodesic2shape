@@ -1,0 +1,43 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Geodesic2shape
+qgisMinimumVersion=2.0
+description=Computes geodetic problems and export the geodesic's line segment of interest to a shapefile.
+version=0.1
+author=Stefano Suraci
+email=stefanosampaio@hotmail.com
+
+about=- Foward Geodetic Problem: computes the geographic position of a point, given the geodetic initial azimuth and ellipsoidal distance from a point with known geographic position;
+	- Inverse Geodetic Problem: computes the geodetic initial azimuth and ellipsoidal distance between two points, given their geographic positions;
+	- The plugin's solution for both problems are based on Vicenty formulae, which has strong evidences of providing sub-millimeter accuracy over all lines of up to 18,000 km;
+	- To create the correspondent Shapefile, the problem is solved for every each 1000m (DEFAULT) sequentially, creating the points of the geodesic's line segment of interest;
+	- Special thanks to my colleagues Guiderlan Mantovani, Maira Kronemberg & Felipe Ferrari and to Prof. Leonardo Oliveira for the tips and suggestions.
+
+tracker=https://github.com/stefano998/geodesic2shape/issues
+repository=https://github.com/stefano998/geodesic2shape
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=geodesic, line, foward, inverse, shapefile, export
+
+homepage=https://github.com/stefano998/geodesic2shape
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
