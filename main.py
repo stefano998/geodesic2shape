@@ -1,5 +1,4 @@
 #plugin Geodesic2Shape
-#by Stefano
 
 from __future__ import division
 import sys
