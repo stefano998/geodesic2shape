@@ -1,5 +1,6 @@
 # geodesic2shape
 QGIS Plugin to solve geodetic problems and export the geodesic's line segment of interest to a shapefile.
+
 Solving Geodetic Problems:
 - Foward Geodetic Problem: computes the geographic position of a point, given the initial geodetic azimuth and ellipsoidal distance from a point with known geographic position. 
 
