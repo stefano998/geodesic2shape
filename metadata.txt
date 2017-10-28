@@ -16,7 +16,7 @@ email=stefanosampaio@hotmail.com
 
 about=- Foward Geodetic Problem: computes the geographic position of a point, given the geodetic initial azimuth and ellipsoidal distance from a point with known geographic position;
 	- Inverse Geodetic Problem: computes the geodetic initial azimuth and ellipsoidal distance between two points, given their geographic positions;
-	- The plugin's solution for both problems are based on Vicenty formulae, which has strong evidences of providing sub-millimeter accuracy over all lines of up to 18,000 km;
+	- The plugin's solution for both problems are based on Vicenty formulae, which has strong evidences of providing sub-millimeter accuracy for them over all geodesics' segments on the ellipsoid of up to 18,000 km;
 	- To create the correspondent Shapefile, the problem is solved for every each 1000m (DEFAULT) sequentially, creating the points of the geodesic's line segment of interest;
 	- Special thanks to my colleagues Guiderlan Mantovani, Maira Kronemberg & Felipe Ferrari and to Prof. Leonardo Oliveira for the tips and suggestions.
 
