@@ -1,12 +1,12 @@
 # geodesic2shape
-QGIS Plugin to solve geodetic problems and export the geodesic's line segment of interest to a shapefile.
+QGIS Plugin to solve geodetic problems on the reference ellipsoid and export the geodesic's line segment of interest to a shapefile.
 
 Solving Geodetic Problems:
 - Foward Geodetic Problem: computes the geographic position of a point, given the initial geodetic azimuth and ellipsoidal distance from a point with known geographic position. 
 
 - Inverse Geodetic Problem: computes the initial geodetic azimuth and ellipsoidal distance between two points, given their geographic positions.
 
-The plugin's solution for both problems are based on Vicenty formulae [1]. Strong evidences that Vicenty formulae provides sub-millimeter accuracy over all lines of up to 18000 km are shown in [2].  
+The plugin's solution for both problems are based on Vicenty formulae [1]. Strong evidences that Vicenty formulae provides sub-millimeter accuracy over for them over all geodesics' segments on the ellipsoid of up to 18000 km are shown in [2].  
 
 Creating Shapefiles:
 - Foward Problem (SHP Point): at first, the point that corresponds to the First Station is created. Then, the foward problem is solved n times, for every each 1000m (DEFAULT) sequentially, where, by DEFAULT, n=int(ellipsoidal distance/1000). It begins in the First Station with the initial geodetic azimuth and the distance of 1000m (DEFAULT). Then, the distance is increased to 2000, 3000, 4000...n*1000m (DEFAULT) and all solutions are added as new points to the SHP. At last, the foward problem is solved for the whole ellipsoidal distance, in order to provide the last point of the geodesic's line segment of interest. The created points are called SOLUTION POINTS.
