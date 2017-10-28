@@ -10,7 +10,7 @@
 name=Geodesic2shape
 qgisMinimumVersion=2.0
 description=Computes geodetic problems on the reference ellipsoid and export the geodesic's line segment of interest to a shapefile.
-version=1.0
+version=1.1
 author=Stefano Suraci
 email=stefanosampaio@hotmail.com
 
