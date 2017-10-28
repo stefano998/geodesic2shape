@@ -433,8 +433,12 @@ class MyApp(QtGui.QDialog, FORM_CLASS):
         if abs(long2)>180:
             msgBox.setText("Maximum Longitude is 180:0:0.")
             msgBox.exec_(); return (0,0,0,0,0,0,0,0)
+        #warn and scape if given points are antipodals
+        if (lat1_h==-lat2_h or lat1_d==0) and (long1_h==-long2_h or long1_d==0 or long1_d==180) and (lat1_d==lat2_d or lat1_d-1==lat2_d or lat1_d+1==lat2) and ((long1_d==(180-long2_d)) or (long1_d+1==(180-long2_d)) or (long1_d-1==(180-long2_d))):
+            msgBox.setText("P1 and P2 are (exactly or almost) antipodal (diametrically opposed on the reference ellipsoid). Vicent formulae for the inverse problem does not converge in this case.")
+            msgBox.exec_(); return (0,0,0,0,0,0,0,0)
         return (a,b,lat1, long1, lat2, long2,epsg,aux)
-
+    
     def inverse(self):
         getinv=self.get_inv()
         if getinv[7]==0: return
